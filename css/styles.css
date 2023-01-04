@@ -1,0 +1,199 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+@font-face {
+    font-family: "space";
+    src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: space;
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+main {
+    display: grid;
+    place-items: center;
+    background-image: url("../assets/images/pattern-rings.svg"), url("../assets/images/pattern-circle.svg");
+    background-repeat: no-repeat;
+
+}
+
+header,
+footer {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    place-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+
+}
+
+.contact {
+    padding-top: 1.5remd;
+    text-decoration: #4EE1A0 underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.1rem;
+    color: white;
+}
+
+#intro {
+    display: grid;
+    place-items: center;
+
+}
+
+picture {
+    display: flex;
+
+}
+
+
+#skills {
+    display: grid;
+    width: 100%;
+    border-top: white 1px solid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#projects {
+    max-width: 70rem;
+}
+
+#projectintro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#projectintro .contact {
+    text-align: right;
+}
+
+@media (max-width: 425px) {
+    body{
+        padding: 1rem;
+    }
+    main {
+        background-position: 180% 10%, 135% 18%;
+    }
+
+    picture {
+
+        max-width: 10.875rem;
+    }
+
+    header,
+    footer {
+        font-size: 1.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    #intro {
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+
+    span {
+        text-decoration: underline;
+        text-decoration-color: #4EE1A0;
+    }
+
+    #skills {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 1.5rem;
+        text-align: center;
+        border-bottom: white 1px solid;
+        background-image: url("../assets/images/pattern-rings.svg");
+        background-repeat: no-repeat;
+    }
+
+    .portfolio {
+        padding-top: 2.5rem;
+    }
+
+    .portfolio img {
+        padding-bottom: 1.3rem;
+    }
+
+    .code-links {
+        padding-top: 1.3rem;
+        display: flex;
+        gap: 1.8rem;
+    }
+
+    #contactMe {
+        padding-top: 5rem;
+        height: 52.125rem;
+        background-color: #242424;
+
+    }
+
+
+
+
+
+}
