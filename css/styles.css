@@ -79,18 +79,53 @@ footer {
     place-items: center;
 }
 
+#contactMe,
+footer {
+    background-color: #242424;
+}
+
+footer {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+header{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+main {
+    background-position: 180% 10%, 135% 18%;
+}
+
+picture img {
+    border-radius: 100%;
+    border: white 2px solid;
+    filter: grayscale(1);
+
+}
+
 .links {
     display: flex;
     gap: 2rem;
 
 }
 
-.contact {
+.contact,
+#submit {
     padding-top: 1.5remd;
     text-decoration: #4EE1A0 underline;
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.1rem;
     color: white;
+}
+
+#submit {
+    position: relative;
+    text-transform: uppercase;
+    border-bottom: none;
+    width: fit-content;
+
 }
 
 #intro {
@@ -111,11 +146,19 @@ picture {
     border-top: white 1px solid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
 }
 
 #projects {
-    max-width: 70rem;
+    max-width: 90%;
 }
+
+
 
 #projectintro {
     display: grid;
@@ -125,25 +168,112 @@ picture {
 #projectintro .contact {
     text-align: right;
 }
+span {
+    text-decoration: underline;
+    text-decoration-color: #4EE1A0;
+}
+
+
+
+label {
+    display: none;
+}
+
+input {
+    margin-top: 3.2rem;
+    background-color: #242424;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px white solid;
+    width: 100%;
+    color: white;
+}
+
+#messages {
+    display: grid;
+    row-gap: 1rem;
+
+}
+
+#message {
+    height: 6.688rem;
+    
+}
+
+#message::placeholder {
+    position: relative;
+    top: -3rem;
+}
+
+#port-images{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1.8rem;
+    row-gap: 1.8rem;
+}
+
+.portfolio a:hover, .portfolio img:focus-visible{
+    filter: opacity(0.20);
+} 
+
+#messages{
+    max-width: 27.813rem;
+}
+
+#contactMe{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10.313rem;
+}
+
+#contactMe-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+}
+
+#contactMe-info h2{
+    font-size: 2.5rem;
+}
+
+.code-links{
+    display: flex;
+    gap: 2.5rem;
+    /* white-space: nowrap; */
+}
+
 
 @media (max-width: 425px) {
-    body{
-        padding: 1rem;
+    
+    #port-images{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        column-gap: 1.8rem;
     }
-    main {
-        background-position: 180% 10%, 135% 18%;
+
+    article {
+        padding: 1rem;
     }
 
     picture {
-
         max-width: 10.875rem;
     }
 
     header,
     footer {
+        border-top: 2px white solid;
         font-size: 1.5rem;
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
+    }
+
+    footer {
+        padding-top: 5.2rem;
     }
 
     #intro {
@@ -155,10 +285,7 @@ picture {
         font-size: 2.5rem;
     }
 
-    span {
-        text-decoration: underline;
-        text-decoration-color: #4EE1A0;
-    }
+    
 
     #skills {
         padding-top: 2.5rem;
@@ -186,14 +313,130 @@ picture {
     }
 
     #contactMe {
-        padding-top: 5rem;
-        height: 52.125rem;
+        padding: 5rem 0 0 0;
+        max-height: 52.125rem;
         background-color: #242424;
+        grid-template-columns: repeat(1,1fr);
 
     }
 
 
 
+
+
+
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+    article {
+        padding: 1.8rem;
+    }
+
+    picture{
+        max-width: 21.813rem;
+    }
+
+    #intro{
+        display: grid;
+    }
+
+    #intro picture{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #info-intro{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #info-intro p{
+        padding-bottom: 2rem;
+
+    }
+
+    #intro{
+        margin-top: 5.6rem;
+    }
+
+    #skills{
+        grid-template-columns: repeat(2,1fr);
+        text-align: center;
+        row-gap: 2rem;
+    }
+
+    #projectintro{
+        margin-bottom: 4rem;
+        justify-content: space-between;
+
+    }
+    #projectintro h2{
+        font-size: 2.5rem;
+    }
+
+    #contactMe{
+        padding: 2rem;
+    }
+
+
+
+}
+
+@media (min-width: 769px){
+
+    article{
+        padding: 7.313rem;
+    }
+
+    picture img{
+        max-width: 27.75rem;
+    }
+
+    #intro{
+        display: grid;
+        column-gap: 1.5rem;
+    }
+
+    #intro picture{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #info-intro{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #info-intro h1{
+        margin-bottom: 2rem;
+        font-size: 3.5rem;
+    }
+
+    #info-intro p{
+        margin-bottom: 2rem;
+    }
+    .contact {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+
+    #projectintro h2{
+        font-size: 2.5rem;
+    }
+
+    .code-links{
+        position: absolute;
+        margin: 0 auto;
+    }
+
+    .portfolio{
+        position: relative;
+    }
 
 
 }
