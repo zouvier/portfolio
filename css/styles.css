@@ -89,7 +89,7 @@ footer {
     padding-bottom: 2rem;
 }
 
-header{
+header {
     width: 100%;
     margin-top: 2rem;
 }
@@ -126,6 +126,18 @@ picture img {
     border-bottom: none;
     width: fit-content;
 
+
+}
+
+#submit:hover {
+    transition: 2s ease;
+    color: #4EE1A0;
+    cursor: pointer;
+}
+
+#submit:active {
+    font-size: 1.2rem;
+
 }
 
 #intro {
@@ -134,8 +146,50 @@ picture img {
 
 }
 
+.hidden{
+    visibility: hidden;
+    transition: 0.8s ease;
+}
+
+.sendOff{
+    transition: 0.8s ease;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    background-color: #4EE1A0;
+}
+
+.emailError{
+    color: red;
+    text-align: right;
+}
+
+.emailNameError, .emailNameError:focus-visible{
+    outline: none;
+    margin-top: 3.2rem;
+    background-color: #242424;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px red solid;
+    width: 100%;
+    color: white;
+}
+
+
+input:focus-visible{
+    border-bottom: #4EE1A0 2px solid;
+    
+}
+
 picture {
     display: flex;
+
+}
+
+path:hover{
+    fill: #4EE1A0;
 
 }
 
@@ -168,6 +222,7 @@ picture {
 #projectintro .contact {
     text-align: right;
 }
+
 span {
     text-decoration: underline;
     text-decoration-color: #4EE1A0;
@@ -180,6 +235,7 @@ label {
 }
 
 input {
+    outline: none;
     margin-top: 3.2rem;
     background-color: #242424;
     border-top: none;
@@ -198,7 +254,7 @@ input {
 
 #message {
     height: 6.688rem;
-    
+
 }
 
 #message::placeholder {
@@ -206,29 +262,27 @@ input {
     top: -3rem;
 }
 
-#port-images{
+#port-images {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 1.8rem;
     row-gap: 1.8rem;
 }
 
-.portfolio a:hover, .portfolio img:focus-visible{
-    filter: opacity(0.20);
-} 
 
-#messages{
+
+#messages {
     max-width: 27.813rem;
 }
 
-#contactMe{
+#contactMe {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 10.313rem;
 }
 
-#contactMe-info{
+#contactMe-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,22 +291,28 @@ input {
     width: 80%;
 }
 
-#contactMe-info h2{
-    font-size: 2.5rem;
+#contactMe-info h2 {
+    font-size: 4.5rem;
 }
 
-.code-links{
+.code-links {
     display: flex;
     gap: 2.5rem;
     /* white-space: nowrap; */
 }
 
 
-@media (max-width: 425px) {
-    
-    #port-images{
+.contact:hover,
+.contact:focus-visible {
+    color: #4EE1A0;
+}
+
+
+@media (max-width: 580px) {
+
+    #port-images {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         column-gap: 1.8rem;
     }
 
@@ -285,7 +345,7 @@ input {
         font-size: 2.5rem;
     }
 
-    
+
 
     #skills {
         padding-top: 2.5rem;
@@ -316,7 +376,7 @@ input {
         padding: 5rem 0 0 0;
         max-height: 52.125rem;
         background-color: #242424;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
 
     }
 
@@ -327,56 +387,57 @@ input {
 
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 580px) and (max-width: 768px) {
     article {
         padding: 1.8rem;
     }
 
-    picture{
+    picture {
         max-width: 21.813rem;
     }
 
-    #intro{
+    #intro {
         display: grid;
     }
 
-    #intro picture{
+    #intro picture {
         grid-column-start: 2;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
     }
 
-    #info-intro{
+    #info-intro {
         grid-row-start: 1;
         grid-row-end: 1;
     }
 
-    #info-intro p{
+    #info-intro p {
         padding-bottom: 2rem;
 
     }
 
-    #intro{
+    #intro {
         margin-top: 5.6rem;
     }
 
-    #skills{
-        grid-template-columns: repeat(2,1fr);
+    #skills {
+        grid-template-columns: repeat(2, 1fr);
         text-align: center;
         row-gap: 2rem;
     }
 
-    #projectintro{
+    #projectintro {
         margin-bottom: 4rem;
         justify-content: space-between;
 
     }
-    #projectintro h2{
+
+    #projectintro h2 {
         font-size: 2.5rem;
     }
 
-    #contactMe{
+    #contactMe {
         padding: 2rem;
     }
 
@@ -384,59 +445,92 @@ input {
 
 }
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
 
-    article{
+    article {
         padding: 7.313rem;
     }
 
-    picture img{
+    picture img {
         max-width: 27.75rem;
     }
 
-    #intro{
+    #intro {
         display: grid;
         column-gap: 1.5rem;
     }
 
-    #intro picture{
+    #intro picture {
         grid-column-start: 2;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
     }
 
-    #info-intro{
+    #info-intro {
         grid-row-start: 1;
         grid-row-end: 1;
     }
 
-    #info-intro h1{
+    #info-intro h1 {
         margin-bottom: 2rem;
         font-size: 3.5rem;
     }
 
-    #info-intro p{
+    #info-intro p {
         margin-bottom: 2rem;
     }
+
     .contact {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
 
 
-    #projectintro h2{
+    #projectintro h2 {
         font-size: 2.5rem;
     }
 
-    .code-links{
+    .code-links {
         position: absolute;
-        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+
     }
 
-    .portfolio{
+    .portfolio {
         position: relative;
+
     }
 
+    .portfolio img {
+        transition: 1.2s ease;
+    }
+
+    .portfolio:hover img:not(:hover),
+    .portfolio img:hover,
+    .portfolio:focus-visible img:not(:focus-visible),
+    .portfolio img:focus-visible {
+        transition: .8s ease;
+        filter: opacity(0.20);
+    }
+
+    .portfolio:hover .project:not(:hover),
+    .project:hover,
+    .project:focus-visible,
+    .portfolio:focus-visible .project:not(:focus-visible) {
+        display: inline-block;
+
+    }
+
+    .project:hover {
+        color: #4EE1A0;
+    }
+
+    .project {
+        display: none;
+    }
 
 }
