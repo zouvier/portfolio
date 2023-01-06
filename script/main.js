@@ -3,7 +3,6 @@ const invalidWarning = document.getElementById('invalidEmail')
 email.addEventListener('invalid', (event)=>{
     invalidWarning.className = "emailError";
     email.className = "emailNameError";
-
 })
 
 

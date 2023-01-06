@@ -2,6 +2,7 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+
 @font-face {
     font-family: "space";
     src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
@@ -125,8 +126,7 @@ picture img {
     text-transform: uppercase;
     border-bottom: none;
     width: fit-content;
-
-
+    transition: 0.8s ease;
 }
 
 #submit:hover {
@@ -228,7 +228,9 @@ span {
     text-decoration-color: #4EE1A0;
 }
 
-
+article{
+    padding: 1rem;
+}
 
 label {
     display: none;
@@ -277,6 +279,7 @@ input {
 }
 
 #contactMe {
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 10.313rem;
@@ -292,7 +295,7 @@ input {
 }
 
 #contactMe-info h2 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
 }
 
 .code-links {
@@ -301,10 +304,14 @@ input {
     /* white-space: nowrap; */
 }
 
+.contact{
+    transition: 2s ease;
+}
 
 .contact:hover,
 .contact:focus-visible {
     color: #4EE1A0;
+    transition: 0.8s ease;
 }
 
 
@@ -326,7 +333,7 @@ input {
 
     header,
     footer {
-        border-top: 2px white solid;
+       
         font-size: 1.5rem;
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
@@ -373,7 +380,7 @@ input {
     }
 
     #contactMe {
-        padding: 5rem 0 0 0;
+        padding: 5rem 1.5rem 0 1.5rem;
         max-height: 52.125rem;
         background-color: #242424;
         grid-template-columns: repeat(1, 1fr);
@@ -475,10 +482,12 @@ input {
     #info-intro h1 {
         margin-bottom: 2rem;
         font-size: 3.5rem;
+        max-width: 37.5rem;
     }
 
     #info-intro p {
         margin-bottom: 2rem;
+        max-width: 31.25rem;
     }
 
     .contact {
